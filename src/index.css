@@ -1,0 +1,86 @@
+@layer theme {
+  @import "tailwindcss/theme.css";
+}
+
+@layer base {
+  #pricing-table-container {
+    @import "tailwindcss/preflight.css";
+    font-family: var(
+      --default-font-family,
+      ui-sans-serif,
+      system-ui,
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+      "Noto Color Emoji"
+    );
+
+    .single-thumb {
+      margin-top: 20px;
+    }
+
+    .single-thumb.range-slider {
+      background: #f5f5f5 !important;
+      height: 8px !important;
+    }
+
+    /* Range Slider as a Single Thumb Slider */
+    .single-thumb .range-slider__thumb[data-lower] {
+      width: 0 !important;
+    }
+    .single-thumb .range-slider__thumb[data-upper] {
+      background: #7000e0 !important;
+      width: 28px !important;
+      height: 28px !important;
+    }
+    .single-thumb .range-slider__range {
+      border-radius: 6px;
+      background: #7000e0 !important;
+      height: 8px !important;
+    }
+  }
+
+  .no-twp {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+      all: revert-layer;
+    }
+  }
+}
+
+@layer components;
+
+@layer utilities {
+  #pricing-table-container {
+    @import "tailwindcss/utilities.css";
+  }
+}
+
+@theme {
+  --color-neutral-800: #170f49;
+  --color-neutral-600: #6f6c90;
+}
+
+@utility main-gradient {
+  background: #3a2ced;
+  background: linear-gradient(
+    90deg,
+    rgba(112, 0, 224, 1) 0%,
+    rgba(58, 44, 237, 1) 100%
+  );
+  color: white;
+}
+
+@utility main-gradient-corner {
+  background: #3a2ced;
+  background: linear-gradient(
+    305deg,
+    rgba(58, 44, 237, 1) 0%,
+    rgba(112, 0, 224, 1) 100%
+  );
+  color: white;
+}

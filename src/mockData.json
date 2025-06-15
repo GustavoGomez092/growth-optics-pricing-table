@@ -1,0 +1,157 @@
+{
+  "title": "Choose a plan and get started",
+  "intervals": [
+    {
+      "title": "Monthly",
+      "interval": "Month",
+      "featuredArea": "",
+      "sliderTitle": "What is your Total Monthly Revenue (Gross)?",
+      "plans": [
+        {
+          "name": "Starter",
+          "description": "For early stage Startups processing less than $20k a month.",
+          "price": 0,
+          "hasPriceSlider": false,
+          "features": [
+            "PayPal connections",
+            "Stripe connections",
+            "Blend (Combine your PayPal and Stripe data)",
+            "All Dashboards",
+            "Forecast",
+            "Collaborators",
+            "Support via Email"
+          ],
+          "cta": "Get started",
+          "ctaLink": "/signup"
+        },
+        {
+          "name": "Growth Plan",
+          "description": "Perfect for businesses on the journey to reach $12M in ARR",
+          "hasPriceSlider": true,
+          "features": [
+            "PayPal connections",
+            "Stripe connections",
+            "Blend (Combine your PayPal and Stripe data)",
+            "All Dashboards",
+            "Forecast",
+            "Collaborators",
+            "Support via Email & Virtual Meeting"
+          ],
+          "cta": "Get started",
+          "ctaLink": "/signup"
+        },
+        {
+          "name": "Enterprise",
+          "description": "For businesses on the path to going public or already publicly listed.",
+          "hasPriceSlider": false,
+          "features": [
+            "PayPal connections",
+            "Stripe connections",
+            "Blend (Combine your PayPal and Stripe data)",
+            "All Dashboards",
+            "Forecast",
+            "Collaborators",
+            "Dedicated account manager, solutions engineering support and SLA"
+          ],
+          "cta": "Contact us",
+          "ctaLink": "/contact"
+        }
+      ],
+      "priceSliderInfo": {
+        "priceSliderMin": 0,
+        "priceSliderMax": 1000000,
+        "priceSliderStep": 1000,
+        "priceSliderDefault": 18000,
+        "priceSliderUnit": "$",
+        "priceSliderUnitPosition": "left",
+        "priceSliderBrackets": [
+          { "min": 0, "max": 20000, "price": 0 },
+          { "min": 20001, "max": 50000, "price": 80 },
+          { "min": 50001, "max": 100000, "price": 150 },
+          { "min": 100001, "max": 200000, "price": 250 },
+          { "min": 200001, "max": 300000, "price": 350 },
+          { "min": 300001, "max": 500000, "price": 500 },
+          { "min": 500001, "max": 750000, "price": 700 },
+          { "min": 750001, "max": 1000000, "price": 900 },
+          { "min": 1000001, "label": "Contact us" }
+        ]
+      }
+    },
+    {
+      "title": "Yearly",
+      "interval": "Year",
+      "featuredArea": "Save 20%",
+      "sliderTitle": "What is your Total Monthly Revenue (Gross)?",
+      "plans": [
+        {
+          "name": "Starter",
+          "description": "For early stage Startups processing less than $20k a month.",
+          "price": 0,
+          "hasPriceSlider": false,
+          "features": [
+            "PayPal connections",
+            "Stripe connections",
+            "Blend (Combine your PayPal and Stripe data)",
+            "All Dashboards",
+            "Forecast",
+            "Collaborators",
+            "Support via Email"
+          ],
+          "cta": "Get started",
+          "ctaLink": "/signup"
+        },
+        {
+          "name": "Growth Plan",
+          "description": "Perfect for businesses on the journey to reach $12M in ARR",
+          "hasPriceSlider": true,
+          "features": [
+            "PayPal connections",
+            "Stripe connections",
+            "Blend (Combine your PayPal and Stripe data)",
+            "All Dashboards",
+            "Forecast",
+            "Collaborators",
+            "Support via Email & Virtual Meeting"
+          ],
+          "cta": "Get started",
+          "ctaLink": "/signup"
+        },
+        {
+          "name": "Enterprise",
+          "description": "For businesses on the path to going public or already publicly listed.",
+          "hasPriceSlider": false,
+          "features": [
+            "PayPal connections",
+            "Stripe connections",
+            "Blend (Combine your PayPal and Stripe data)",
+            "All Dashboards",
+            "Forecast",
+            "Collaborators",
+            "Dedicated account manager, solutions engineering support and SLA"
+          ],
+          "cta": "Contact us",
+          "ctaLink": "/contact"
+        }
+      ],
+      "priceSliderInfo": {
+        "priceSliderMin": 0,
+        "priceSliderMax": 1000000,
+        "priceSliderStep": 1000,
+        "priceSliderDefault": 18000,
+        "priceSliderUnit": "$",
+        "priceSliderUnitPosition": "left",
+        "priceSliderBrackets": [
+          { "min": 0, "max": 20000, "price": 0 },
+          { "min": 20001, "max": 50000, "price": 960 },
+          { "min": 50001, "max": 100000, "price": 1800 },
+          { "min": 100001, "max": 200000, "price": 3000 },
+          { "min": 200001, "max": 300000, "price": 4200 },
+          { "min": 300001, "max": 500000, "price": 6000 },
+          { "min": 500001, "max": 750000, "price": 8400 },
+          { "min": 750001, "max": 1000000, "price": 10800 },
+          { "min": 1000001, "label": "Contact us" }
+        ]
+      }
+    }
+  ]
+}
