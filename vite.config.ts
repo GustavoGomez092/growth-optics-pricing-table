@@ -1,7 +1,7 @@
 import { defineConfig, type UserConfigExport } from "vite"
 import react from "@vitejs/plugin-react"
 import tailwindcss from "@tailwindcss/vite"
-import mockData from "./src/mockData.json"
+import mockData from "./src/mockData"
 import { dirname, resolve } from "node:path"
 import { fileURLToPath } from "node:url"
 
@@ -12,37 +12,19 @@ export default defineConfig(({ mode }) => {
   let config: UserConfigExport = {}
   if (mode === "production") {
     config = {
+      define: {
+        "process.env.NODE_ENV": JSON.stringify(mode),
+      },
       build: {
         lib: {
           entry: resolve(__dirname, "./src/main.tsx"),
           name: "PricingTable",
           // the proper extensions will be added
           fileName: "pricing-table",
-        },
-        rollupOptions: {
-          // make sure to externalize deps that shouldn't be bundled
-          // into your library
-          external: [
-            "react",
-            "react/jsx-runtime",
-            "react-dom",
-            "react-dom/client",
-            "gsap",
-          ],
-          output: {
-            // Provide global variables to use in the UMD build
-            // for externalized deps
-            globals: {
-              react: "react",
-              "react/jsx-runtime": "jsxRuntime",
-              "react-dom": "ReactDOM",
-              "react-dom/client": "ReactDOMClient",
-              gsap: "gsap",
-            },
-          },
+          formats: ["es"],
         },
       },
-      plugins: [tailwindcss()],
+      plugins: [tailwindcss(), react()],
     }
   } else if (mode === "development") {
     config = {
