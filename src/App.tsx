@@ -26,7 +26,7 @@ function App(props: { data: PricingModule }) {
   return (
     <div className="main-container w-full lg:w-7xl mx-auto px-2 lg:px-4 xl:px-0 py-14 lg:py-24">
       <div className="top-area flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 pb-12 lg:pb-20">
-        <h1 className="text-[46px] lg:text-[72px] w-full max-w-[560px] font-bold">
+        <h1 className="!text-[46px] lg:!text-[72px] !w-full !max-w-[560px] !font-bold">
           {props.data.title}
         </h1>
         <div className="plan-intervals flex flex-row gap-8 bg-[#F5F5F5] p-3.5 rounded-full">
@@ -65,7 +65,7 @@ function App(props: { data: PricingModule }) {
             }`}
           >
             <div className="heading mb-4">
-              <h2 className="text-[36px] text-neutral-800 font-bold mb-4">
+              <h2 className="!text-[36px] !text-neutral-800 !font-bold !mb-4 !text-left">
                 {plan.name}
               </h2>
               <p className="description text-neutral-600 text-[18px]">
@@ -104,7 +104,7 @@ function App(props: { data: PricingModule }) {
               {!plan.hasPriceSlider ? (
                 <>
                   <p className="text-[54px] font-bold text-neutral-800 mb-0">
-                    {!plan?.price
+                    {!("price" in plan) && plan.price === undefined
                       ? null
                       : plan.price === 0
                       ? "Free"
@@ -149,7 +149,7 @@ function App(props: { data: PricingModule }) {
                 what's included
               </p>
               <ul
-                className={`features-list ${
+                className={`features-list !px-0 ${
                   plan.hasPriceSlider ? "columns-1 lg:columns-2" : "columns-1"
                 }`}
               >
