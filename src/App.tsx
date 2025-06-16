@@ -24,9 +24,9 @@ function App(props: { data: PricingModule }) {
     )
 
   return (
-    <div className="main-container w-7xl mx-auto px-4 xl:px-0 py-24">
-      <div className="top-area flex flex-col lg:flex-row justify-between items-end gap-8 pb-20">
-        <h1 className="text-[72px] w-full max-w-[560px] font-bold">
+    <div className="main-container w-full lg:w-7xl mx-auto px-2 lg:px-4 xl:px-0 py-14 lg:py-24">
+      <div className="top-area flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 pb-12 lg:pb-20">
+        <h1 className="text-[46px] lg:text-[72px] w-full max-w-[560px] font-bold">
           {props.data.title}
         </h1>
         <div className="plan-intervals flex flex-row gap-8 bg-[#F5F5F5] p-3.5 rounded-full">
@@ -37,14 +37,14 @@ function App(props: { data: PricingModule }) {
                 setActiveInterval(interval.title)
                 setRevenue(interval.priceSliderInfo?.priceSliderDefault || 0)
               }}
-              className={`plan-interval py-2 px-4 rounded-full cursor-pointer ${
+              className={`plan-interval py-1 lg:py-2 px-2 lg:px-4 rounded-full cursor-pointer ${
                 activeInterval === interval.title ? "bg-white" : ""
               }`}
             >
-              <p className="text-[24px]">
+              <p className="text-[18px] lg:text-[24px]">
                 {interval.title}
                 {interval.featuredArea !== "" ? (
-                  <span className="main-gradient py-2 px-4 rounded-full ml-2.5">
+                  <span className="main-gradient py-1 lg:py-2 px-2 lg:px-4 rounded-full ml-2.5">
                     {interval.featuredArea}
                   </span>
                 ) : null}
@@ -58,10 +58,10 @@ function App(props: { data: PricingModule }) {
         {currentInterval?.plans.map((plan) => (
           <div
             key={plan.name}
-            className={`plan-card bg-white rounded-2xl p-8 mb-8 border-2 border-[#EFF0F6] ${
+            className={`plan-card bg-white rounded-2xl p-8 mb-2 lg:mb-8 border-2 border-[#EFF0F6] ${
               plan.hasPriceSlider
-                ? "w-full md:w-[calc(50%_-_0.4em)]"
-                : "w-full md:w-[calc(25%_-_0.4em)]"
+                ? "w-full lg:w-[calc(50%_-_0.4em)]"
+                : "w-full lg:w-[calc(25%_-_0.4em)]"
             }`}
           >
             <div className="heading mb-4">
@@ -150,7 +150,7 @@ function App(props: { data: PricingModule }) {
               </p>
               <ul
                 className={`features-list ${
-                  plan.hasPriceSlider ? "columns-2" : "columns-1"
+                  plan.hasPriceSlider ? "columns-1 lg:columns-2" : "columns-1"
                 }`}
               >
                 {plan.features.map((feature) => (
