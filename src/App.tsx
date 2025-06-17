@@ -8,12 +8,12 @@ function App(props: { data: PricingModule }) {
     props.data.intervals[0].title
   )
 
-  const currentInterval = props.data.intervals.find(
-    (interval) => interval.title === activeInterval
+  const [revenue, setRevenue] = useState(
+    props.data.intervals[0].priceSliderInfo?.priceSliderDefault || 0
   )
 
-  const [revenue, setRevenue] = useState(
-    currentInterval?.priceSliderInfo.priceSliderDefault || 0
+  const currentInterval = props.data.intervals.find(
+    (interval) => interval.title === activeInterval
   )
 
   const currentBracket =
@@ -33,10 +33,7 @@ function App(props: { data: PricingModule }) {
           {props.data.intervals.map((interval) => (
             <div
               key={interval.title}
-              onClick={() => {
-                setActiveInterval(interval.title)
-                setRevenue(interval.priceSliderInfo?.priceSliderDefault || 0)
-              }}
+              onClick={() => setActiveInterval(interval.title)}
               className={`plan-interval py-1 lg:py-2 px-2 lg:px-4 rounded-full cursor-pointer ${
                 activeInterval === interval.title ? "bg-white" : ""
               }`}
