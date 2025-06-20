@@ -57,7 +57,7 @@ function App(props: { data: PricingModule }) {
           </div>
         ) : null}
         <div className="plan-intervals flex flex-col gap-3 p-0 lg:p-3.5 mb-10 lg:mb-0 rounded-full">
-          <label className="inline-flex items-center cursor-pointer">
+          <label className="!inline-flex items-center cursor-pointer">
             <input
               type="checkbox"
               checked={
@@ -120,7 +120,7 @@ function App(props: { data: PricingModule }) {
         {currentInterval?.plans.map((plan) => (
           <div
             key={plan.name}
-            className="plan-card relative bg-white rounded-3xl px-10 py-12 mb-2 lg:mb-8 border-2 border-[#EFF0F6] w-full lg:w-[calc(33%_-_1.1em)]"
+            className="plan-card relative bg-white rounded-3xl px-10 py-12 mb-2 lg:mb-8 border-2 border-[#EFF0F6] w-full lg:w-[calc(33%_-_1.25em)]"
           >
             {plan.hasPriceSlider ? (
               <div className="absolute -top-6 right-6 z-10 animate-[heartbeat_8s_ease-in-out_infinite]">
@@ -141,7 +141,7 @@ function App(props: { data: PricingModule }) {
                 </span>
               </h2>
               {plan.price === 0 ? (
-                <p className="text-[18px] text-neutral-600 font-normal mb-12">
+                <p className="text-[18px] text-neutral-600 font-normal !mb-12">
                   Always free
                 </p>
               ) : null}
@@ -195,8 +195,8 @@ function App(props: { data: PricingModule }) {
                   className={`${
                     plan.hasPriceSlider
                       ? "main-gradient-corner"
-                      : "bg-white text-neutral-800 border border-neutral-800"
-                  } cta-button  text-center px-4 py-6 font-bold rounded-[20px] cursor-pointer text-[18px]`}
+                      : "bg-white text-neutral-800 border border-neutral-800 hover:bg-secondary hover:text-white"
+                  } cta-button text-center px-4 py-6 font-bold rounded-[20px] cursor-pointer text-[18px] transition-colors duration-300 ease-in-out`}
                 >
                   {plan.cta}
                 </div>
