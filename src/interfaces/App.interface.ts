@@ -23,6 +23,7 @@ interface Plan {
   features: string[]
   cta: string
   ctaLink: string
+  disclaimer?: string
 }
 
 interface TimeIntervals {
