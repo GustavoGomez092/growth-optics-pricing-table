@@ -245,14 +245,14 @@ function App(props: { data: PricingModule }) {
                   </li>
                 ))}
               </ul>
-              {plan.disclaimer ? (
+              {/* {plan.disclaimer ? (
                 <>
                   <p className="text-[12px] text-neutral-600 mt-4">Heads up:</p>
                   <p className="text-[12px] text-neutral-600">
                     {plan.disclaimer}
                   </p>
                 </>
-              ) : null}
+              ) : null} */}
             </div>
           </div>
         ))}
